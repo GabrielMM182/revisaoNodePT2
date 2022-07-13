@@ -1,0 +1,92 @@
+[
+    {
+      "id": 1,
+      "nome": "pim",
+      "idade": 7,
+      "curiosidade": "preguica"
+    },
+    {
+      "id": 2,
+      "nome": "pipoca azedo",
+      "idade": 7,
+      "curiosidade": "eletrico"
+    },
+    {
+      "id": 3,
+      "nome": "xeninha",
+      "idade": 10,
+      "curiosidade": "brava"
+    },
+    {
+      "id": 4,
+      "nome": "puff",
+      "idade": 8,
+      "curiosidade": "misterioso"
+    },
+    {
+      "id": 5,
+      "nome": "chico",
+      "idade": 9,
+      "curiosidade": "surigato"
+    },
+    {
+      "id": 6,
+      "nome": "mione",
+      "idade": 2,
+      "curiosidade": "misteriosa"
+    },
+    {
+      "id": 7,
+      "nome": "casimiro",
+      "idade": 13,
+      "curiosidade": "fofo"
+    },
+    {
+      "id": 8,
+      "nome": "scarlet",
+      "idade": 4,
+      "curiosidade": "linda"
+    },
+    {
+      "id": 9,
+      "nome": "bruce",
+      "idade": 2,
+      "curiosidade": "engracadao"
+    },
+    {
+      "id": 10,
+      "nome": "bira",
+      "idade": 7,
+      "curiosidade": "gordao"
+    },
+    {
+      "id": 11,
+      "nome": "greg",
+      "idade": 11,
+      "curiosidade": "fofo"
+    },
+    {
+      "id": 12,
+      "nome": "apolo",
+      "idade": 22,
+      "curiosidade": "praia"
+    },
+    {
+      "id": 13,
+      "nome": "sheik",
+      "idade": 17,
+      "curiosidade": "gigante"
+    },
+    {
+      "id": 14,
+      "nome": "nina",
+      "idade": 7,
+      "curiosidade": "ao contrario"
+    },
+    {
+      "id": 15,
+      "nome": "alecrim",
+      "idade": 2,
+      "curiosidade": "amarelao"
+    }
+  ]
