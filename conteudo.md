@@ -1,0 +1,16 @@
+- criar com npm init -y
+- npm i express, nodemon
+- criar o esqueleto do projeto 
+- definir a parte do index.js ja dando o listen na porta 3000 e puxando as rotas e express.json()
+- comecar a definir nosso controller
+- primeira parte a ser feito vai ser buscar e escrever no arquivo
+- usamos o await quando queremos realizar uma requisicao atravez de uma function ou algo mais especifico ainda mais por ser async (trabalhar com promises) 
+(PROMISE =  msm coisa que chegar em um restaurante e pedir uma parmegiana e dps vir um papel confirmando que vc vai receber sua parmegianna e uma promise)
+- mostrar como configurar o url_base no insominia atravez so envirement base
+- primeiro realizar o write e search do animal em controller (talvez criar um separado)
+- apos isso mostrar a logica que vamos reescrever o database.json do zero
+- vamos comecar com o post 
+- seguindo a ordem de controller e router...
+- getAll depois e explicar essa validacao que vai feita do everyAnimal e someAnimal
+- vamos implementar  aparte de filtro do middleware q vai ficar so no POST
+- realizar o restante do CRUD
