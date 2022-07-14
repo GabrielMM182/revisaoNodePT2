@@ -10,22 +10,22 @@
 ## Listar Animais (getALL)
 Este endpoint deve listar todos os animais registrados no nosso BD do usuario
 
-O retorno deve ser um JSON contendo uma lista de objetos, sendo ele: { nome, idade, curiosidade } e com status === 200
+O retorno deve ser um JSON contendo uma lista de objetos, sendo ele: { nome, idade, especie, curiosidade } e com status === 200
 
 Caso nenhum Animal tenho sido encotrado registrado na BD, devera ser retornado status === 204
 
 Este endpoint pode aceitar um parametro tipo que deve listar todos os Animais do tipo digitado (getAll)
 
-## Buscar animal (por ID)
-O Endpoint de buscar, deve ser similar ao listar, porem retornando apenas o animal com o id especificado
+## Buscar animal (por NOME)
+O Endpoint de buscar, deve ser similar ao listar, porem retornando apenas o animal com o nome especificado
 
 ## Registrar animal
-O endpoint de registrar animais deve enviar informacoes para o servidor no formato .json, contendo um objeto do tipo { nome, idade, curiosidade }
+O endpoint de registrar animais deve enviar informacoes para o servidor no formato .json, contendo um objeto do tipo { nome, idade, especie, curiosidade }
 
 {
-    "id": 1
     "nome": "pipoca",
     "idade": 1,
+    "especie": "canino",
     "curiosidade": "gosta de pão"
 }
 
