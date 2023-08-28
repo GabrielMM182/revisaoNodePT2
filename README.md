@@ -1,39 +1,58 @@
-- Criar uma API REST com 5 endPoints, sendo eles responsaveis por ler e escrever um arquivo sobre os animais da turma T07 🐶🐱
+# Animal Management API - Backend Project
 
-- Verbos utilizados (GET, POST, PUT, DELETE)
+Este projeto consiste na criação de uma API REST que permite gerenciar informações sobre os animais da turma. A API disponibiliza quatro endpoints que utilizam os verbos HTTP: GET, POST, PUT e DELETE para ler e escrever informações sobre os animais.
 
-- GET (Receber, visualizar, listar)
-- POST (Postar, enviar)
-- PUT (modificar, atualizar)
-- DELETE (Deletar, apagar, excluir)
+## Endpoints
 
-## Listar Animais (getALL)
-Este endpoint deve listar todos os animais registrados no nosso BD do usuario
+### Listar Animais (GET - getAll)
+Este endpoint permite listar todos os animais registrados no banco de dados do usuário.
 
-O retorno deve ser um JSON contendo uma lista de objetos, sendo ele: { nome, idade, especie, curiosidade } e com status === 200
+- **URL:** `/animais`
+- **Método:** GET
+- **Parâmetros de URL opcionais:** `tipo` (para filtrar animais por tipo)
+- **Resposta bem-sucedida (200):** Retorna um JSON contendo uma lista de objetos com os campos { nome, idade, especie, curiosidade }.
+- **Resposta sem animais registrados (204):** Retorna um código de status 204 se nenhum animal for encontrado.
 
-Caso nenhum Animal tenho sido encotrado registrado na BD, devera ser retornado status === 204
+### Buscar Animal por Nome (GET - getByNome)
+Este endpoint permite buscar um animal pelo nome especificado.
 
-Este endpoint pode aceitar um parametro tipo que deve listar todos os Animais do tipo digitado (getAll)
+- **URL:** `/animais/:nome`
+- **Método:** GET
+- **Parâmetros de URL:** `nome` (nome do animal a ser buscado)
+- **Resposta bem-sucedida (200):** Retorna um JSON contendo os detalhes do animal especificado { nome, idade, especie, curiosidade }.
+- **Resposta sem resultado (404):** Retorna um código de status 404 se o animal não for encontrado.
 
-## Buscar animal (por NOME)
-O Endpoint de buscar, deve ser similar ao listar, porem retornando apenas o animal com o nome especificado
+### Registrar Animal (POST - registrar)
+Este endpoint permite registrar um novo animal.
 
-## Registrar animal
-O endpoint de registrar animais deve enviar informacoes para o servidor no formato .json, contendo um objeto do tipo { nome, idade, especie, curiosidade }
+- **URL:** `/animais`
+- **Método:** POST
+- **Corpo da requisição:** JSON no formato { nome, idade, especie, curiosidade }
+- **Resposta bem-sucedida (201):** Retorna um código de status 201 após registrar o animal com sucesso.
 
+```json
 {
     "nome": "pipoca",
     "idade": 1,
     "especie": "canino",
     "curiosidade": "gosta de pão"
 }
+```
+### Deletar Animal (DELETE - deletar)
+Este endpoint permite deletar um animal registrado.
 
-O animal deve ser salvo em um arquivo json e deve retornar o status === 201
+- **URL:** `/animais/:id`
+- **Método:** DELETE
+- **Parâmetros de URL:** `id` (identificador único do animal a ser deletado)
+- **Resposta bem-sucedida (200):** Retorna um código de status 200 após deletar o animal com sucesso.
+- **Resposta sem resultado (404):** Retorna um código de status 404 se o animal não for encontrado.
 
-## Deletar animal
-Caso o registro do animal tenho sido feito errado, este endpoint devera deletar o registro e retornar status === 200 em caso de sucesso ou status === 400 em caso de registro nao encontrado
+### Atualizar Animal (PUT - atualizar)
+Este endpoint permite atualizar as informações de um animal existente.
 
-## Atualizar animal
-Este endpoint deve alterar o conteudo do objeto para o novo valor a ser enviado a partir de um ID. Deve retornar status === 200 e status === 404 caso o registro nao seja encontrado
-
+- **URL:** `/animais/:id`
+- **Método:** PUT
+- **Parâmetros de URL:** `id` (identificador único do animal a ser atualizado)
+- **Corpo da requisição:** JSON contendo as informações atualizadas do animal { nome, idade, especie, curiosidade }
+- **Resposta bem-sucedida (200):** Retorna um código de status 200 após atualizar o animal com sucesso.
+- **Resposta sem resultado (404):** Retorna um código de status 404 se o animal não for encontrado.
