@@ -67,23 +67,23 @@ const getAllAnimals = async (req, res) => {
     }
 }
  
-const findByName = async (req, res) => {
-    const { nome } = req.params
+// const findByName = async (req, res) => {
+//     const { nome } = req.params
 
-    try {
-        const listAnimals = await searchListAnimals()
+//     try {
+//         const listAnimals = await searchListAnimals()
 
-        const animalFind = listAnimals.find(p => p.nome === nome)
+//         const animalFind = listAnimals.find(p => p.nome === nome)
 
-        if(animalFind) {
-            return res.status(200).json(animalFind)
-        } else {
-            return res.status(404).json({message : "nenhum animal com esse nome foi encontrado cadastrado em nossa API 😭"})
-        }
-    } catch (error) {
-        return res.status(500).json({ message: error.message })
-    }
-}
+//         if(animalFind) {
+//             return res.status(200).json(animalFind)
+//         } else {
+//             return res.status(404).json({message : "nenhum animal com esse nome foi encontrado cadastrado em nossa API 😭"})
+//         }
+//     } catch (error) {
+//         return res.status(500).json({ message: error.message })
+//     }
+// }
 
 const deleteAnimal = async (req, res) => {
     const {nome} = req.params
@@ -145,7 +145,7 @@ const updateAnimal = async (req, res) => {
 module.exports = {
     createAnimals,
     getAllAnimals,
-    findByName,
+    // findByName,
     deleteAnimal,
     updateAnimal
 }
