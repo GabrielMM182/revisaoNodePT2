@@ -4,18 +4,18 @@ const createAnimals = async (req, res) => {
 
     if(!req.body.nome) {
         res.status(400);
-        res.json({erro: "Ocampo nome e obrigatorio"})
+        res.json({erro: "O campo nome e obrigatorio"})
         return;
     }
     if (typeof req.body.nome !== "string") {
         res.status(400);
-        res.json({ erro: "O campo 'nome' é preenchido com texto" });
+        res.json({ erro: "O campo nome precisar no formato string" });
         return;
       }
 
       if (!isNaN(req.body.nome)) {
         res.status(400);
-        res.json({erro: "nao vale colocar num dentro de string 😡"});
+        res.json({erro: "numero não é permitido no campo nome"});
         return  
      }
 
@@ -99,7 +99,7 @@ const deleteAnimal = async (req, res) => {
 
         writeFileAnimals(listDeleteAnimals)
         
-        return res.status(200).json({message: "Animal deletado com sucesso 🤑"})
+        return res.status(200).json({message: "Animal deletado com sucesso"})
     } catch (error) {
         return res.status(500).json({message: error.message})
     }
